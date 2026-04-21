@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/stye2.0.css"> -->
+    <link rel="stylesheet" href="css/stye2.0.css">
     <!-- <link rel="stylesheet" href="css/stileBEM.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+     
     <title>Nike e-commers</title>
 </head>
 <body>
@@ -24,94 +26,254 @@
     </header>
     
     <main class="main">
+        <!-- modal *******************************************************************-->
+        
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <div class="card card--product">
+
+                                        <img src="./img/tenis.jpg" alt="Nombre del Producto" class="card-img-top">
+
+                                        <div class="card-body">
+
+                                            <h5 class="card-title">Tenis Hombre</h5>
+
+                                            <p class="card-text">Nike AF1</p>
+
+                                            <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#productoModal">Detalles</button> -->
+
+                                        </div>
+
+                                    </div>
+                                   <!-- <h5 class="modal-title" id="productoModalLabel">Detalles del Producto</h5>
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                                    <span aria-hidden="true">&times;</span>
+
+                                    </button> -->
+                                </div>
+                                 <div class="modal-body">
+
+                                    <p>Tenis para hombre diferentes tallas, talla 23 a 29</p>
+
+                                </div>
+
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn-cerrar btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                    <button type="button" class="productos__modal--buttom btn btn-primary">Comprar</button>
+
+                                </div>
+                                    <button class="productos__modal--buttom btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Mas detalles</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel2">Tenis Hombre</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Amortiguación: Cuentan con una cápsula de aire encapsulada en la entresuela, originalmente diseñada para el baloncesto para ofrecer comodidad y absorción de impactos.</p>
+                                    <p>Diseño: Silueta clásica de corte bajo (low-top), medio (mid-top) o alto (high-top). Incluyen perforaciones en la puntera para mayor transpirabilidad.</p>
+                                    <p>Materiales: Generalmente construidas con una parte superior de cuero duradero y resistente.</p>
+                                    <p>Suela: Suela de goma robusta que ofrece tracción y durabilidad, ideal para el uso diario.</p>
+                                    <p>Detalles Clásicos: Incluyen la chapa metálica en los cordones (dubrae) y un diseño versátil, siendo la versión blanca sobre blanca la más popular.</p>
+                                    <p>Sostenibilidad: Las versiones modernas incluyen al menos un 20% de materiales reciclados</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="productos__modal--buttom btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Salir</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+
+                        <!-- Modal de Detalles del Producto -->
+
+                        
+
+<!-- *********************************************************************** -->
+
+<!-- SUB MODAL "DETALLES" ************************************************************ -->
+
+                        <!-- <div class="modal fade" id="DetalleModal" tabindex="-1" aria-labelledby="DetalleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="DetalleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+<!-- ********************************************************************************* -->
+       
         <section class="main__banner">
             <h2 class="main__banner--texto" id="txt">Nuestros Productos</h2> 
             <p class="main__banner--texto">Descubre nuestos productos nuevos diseñados para ti</p>
-            <p>Aqui se agrego un texto con el repositorio de github pages</p>    
         </section>
 
         <section class="main__productos">
             <article class="main__article">
-                <img class="main__productos--img" src="img/tenis.jpg" alt="">
-                <h3 class="main__productos--title">Tenis Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img logo" src="img/tenis.jpg" alt="">
+                <h3 class="main__article--title logo" >Tenis Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                    Información
+                    </button>
+                    <button type="button" data-id="1" data-img="img/tenis.jpg" data-nombre="Tenis Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
+
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" src="img/hoddieNike.jpg" alt="">
-                <h3 class="main__productos--title">Hoddie Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/hoddieNike.jpg" alt="">
+                <h3 class="main__article--title">Hoddie Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="2" data-img="img/hoddieNike.jpg" data-nombre="Hoddie Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/pantsNike.jpg" alt="">
-                <h3 class="main__productos--title">Pants Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/pantsNike.jpg" alt="">
+                <h3 class="main__article--title">Pants Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="3" data-img="img/pantsNike.jpg" data-nombre="Pants Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/chamarra.jpg" alt="">
-                <h3 class="main__productos--title">Chamarra Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
-
-            </article>
-
-            <!-- <article>
-                <img src="img/barsaNike.jpg" alt="">
-                <h3>Payera deportiva Hombre</h3>
-                <p>$</p> -->
-
-            </article>
-
-            <article class="main__article">
-                <img class="main__productos--img" sr src="img/tenis.jpg" alt="">
-                <h3 class="main__productos--title">Tenis Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/chamarra.jpg" alt="">
+                <h3 class="main__article--title">Chamarra Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="4" data-img="img/chamarra.jpg" data-nombre="Chamarra Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/hoddieNike.jpg" alt="">
-                <h3 class="main__productos--title">Hoddie Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/tenis.jpg" alt="">
+                <h3 class="main__article--title">Tenis Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="5" data-img="img/tenis.jpg" data-nombre="Tenis Hombre" data-precio="1500" class="productos__modal--buttom btn btn-primary addCart" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/pantsNike.jpg" alt="">
-                <h3 class="main__productos--title">Pants Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/hoddieNike.jpg" alt="">
+                <h3 class="main__article--title">Hoddie Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="6" data-img="img/hoddieNike.jpg" data-nombre="Hoddie Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/chamarra.jpg" alt="">
-                <h3 class="main__productos--title">Chamarra Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" src="img/pantsNike.jpg" alt="">
+                <h3 class="main__article--title">Pants Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="7" data-img="img/pantsNike.jpg" data-nombre="Pants Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
             <article class="main__article">
-                <img class="main__productos--img" sr src="img/tenis.jpg" alt="">
-                <h3 class="main__productos--title">Tenis Hombre</h3>
-                <p class="main__productos--precio">$1,500</p>
+                <img class="main__article--img" sr src="img/chamarra.jpg" alt="">
+                <h3 class="main__article--title">Chamarra Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="8" data-img="img/chamarra.jpg" data-nombre="Chamarra Hombre" data-precio="1500" class="addCart productos__modal--buttom btn btn-primary" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                </div>
 
             </article>
 
-            <!-- <article>
-                <img src="img/hoddieNike.jpg" alt="">
-                <h3>Hoddie Hombre</h3>
-                <p>$</p>
-
-            </article>
-
-            <article>
-                <img src="img/pantsNike.jpg" alt="">
-                <h3>Pants Hombre</h3>
-                <p>$</p>
+            <article class="main__article">
+                <img class="main__article--img" src="img/tenis.jpg" alt="">
+                <h3 class="main__article--title">Tenis Hombre</h3>
+                <p class="main__article--precio">$1,500</p>
+                <div class="main__article--modal">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="productos__modal--buttom btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Información
+                    </button>
+                    <button type="button" data-id="9" data-img="img/tenis.jpg" data-nombre="Tenis Hombre" data-precio="1500" class="productos__modal--buttom btn btn-primary addCart" data-bs-toggle="carrito" data-bs-target="#addcart">
+                    Agregar al carrito
+                    </button>
+                    
+                </div>
 
             </article>
 
@@ -119,6 +281,19 @@
             
         <section class="main__cart" id="addCart">
             <h2 class="main__cart--title">Carrito</h2>
+            <!--  <div class="cart__container">
+                <img class="cart__container--img" src="img/hoddieNike.jpg" alt="" >
+                <p class="cart__container--p1">Hoddie Hombre</p>
+                <p class="cart__container--p1">$1,500</p>
+                <i class="cart__container--borrar"><img src="img/borrar.png" alt="Icono Quitar"></i>
+            </div>
+
+            <div class="cart__container">
+                <img class="cart__container--img" src="img/hoddieNike.jpg" alt="" >
+                <p class="cart__container--p1">Hoddie Hombre</p>
+                <p class="cart__container--p1">$1,500</p>
+                <i class="cart__container--borrar"><img src="img/borrar.png" alt="Icono Quitar"></i>
+            </div> -->
             <ul id="listaCarrito" class="lista__carrito">
                 
             </ul>
@@ -127,7 +302,7 @@
             <button type="button" class="comprar productos__modal--buttom btn ">Comprar</button>
             <br class="mb-2">            
             <button type="button" id="vaciar-carrito">Vaciar Carrito</button>
-        </section> -->
+        </section>
 
 
 <!-- ********************************************************************************************
@@ -161,11 +336,7 @@
     <footer>
 
     </footer>
-
     <script src="js/functions.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
