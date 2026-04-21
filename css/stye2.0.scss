@@ -1,0 +1,533 @@
+// Variables
+
+$colorPrincipal: #FF6600;
+$colorWhite: #f5f5f5;
+$fontPrincipal: Verdana, Geneva, Tahoma, sans-serif;
+$fontZise: clamp(.6rem, 4vw, 1rem);
+$colorCerrar: #ff0000;
+
+    
+// Mixins
+
+
+@mixin img100px{
+
+    width: 100px;
+
+    }
+
+@mixin flex{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin imgBanner{
+    background-size: cover;
+    background-position-y: 30%;
+    background-position-x: center;
+    align-content: center;
+}
+
+@mixin shadowCOntainer($blur, $shadow, $bgColor){
+    box-shadow: -15px -1px $blur -15px $shadow;
+    padding: 10px;
+    background-color: $bgColor;
+}
+
+
+// Extend's
+
+%article{
+    border: 1px $colorPrincipal solid;
+    
+}
+
+%h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+
+  
+
+}
+
+%img{
+   
+    width: 200px;
+}
+
+// Codigo SASS
+
+*{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+
+}
+
+body{
+    font-family: $fontPrincipal;
+
+
+    header{
+        // @include img100px;
+        background-color: $colorPrincipal;
+    
+        .header__menu{
+            @include flex;
+            justify-content: space-between;
+            padding: 20px;  
+            
+        }
+
+        .header__menu--logojust{
+            @include img100px;
+        }
+
+        .header__menu--menulogo{
+            @include img100px;
+            cursor: pointer;
+        }
+
+        .cart-container{
+            @include flex;
+            @include img100px;
+            // width: 100px;
+            cursor: pointer;
+            position: relative;
+            // font-size: 12px;
+            
+            .header__menu--logoNike{
+                // @include img100px;
+
+                .badge{
+                    position: absolute;
+                    top: 10px;
+                    right: -10px;  
+                    background-color: $colorWhite;
+                    color: $colorPrincipal;
+                    border-radius: 100%;
+                    padding: 2px 6px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    display: none;
+                    // @include img100px;
+                    font-weight: 500;
+                    width: 40px;
+                }
+
+                img{
+                     @include img100px;
+                }
+
+                
+             }
+        }
+
+
+        
+    }
+
+    main{
+        // @include img100px;
+
+        .btn-cerrar{
+            background-color: $colorCerrar;
+        }
+        .productos__modal--buttom{
+            
+            background-color: $colorPrincipal;
+            
+            &:hover{
+                background-color: #ec9845;
+            }
+        }
+
+        .main__banner{
+            background-image: url(../img/bannerNike.jpg);
+            @include imgBanner;
+            // @include flex;
+            height: 400px;
+            background-size: cover;
+
+            .main__banner--texto{
+                // font-size: $fontZise;
+                text-align: center;
+            }
+            
+        }
+
+        .main__productos{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-row: auto;
+            gap: 10px;
+            width: 80%;
+            margin: 10px auto 0;
+
+
+            .main__article{
+                @include flex;
+                flex-direction: column;
+                gap: 10px;
+                width: auto;
+                
+                @extend %h3;
+                @extend %article;
+                
+                .main__article--img{
+                    
+<<<<<<< HEAD
+                    // @extend %img;
+                    width: 100px;
+=======
+                    @extend %img;
+>>>>>>> refs/remotes/origin/master
+                    margin-top: 10px;
+                }
+    
+                .main__article--title{
+                    @extend %h3;
+                }
+                
+                .main__article--precio{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+
+<<<<<<< HEAD
+                    &.red{
+                        color: red;
+                        font-weight: 600;
+                    }
+
+                    &.blue{
+                        color: blue;
+                        font-weight: 600;
+                    }
+
+=======
+>>>>>>> refs/remotes/origin/master
+                
+                }
+                .main__article--modal{
+
+                    @include flex;
+<<<<<<< HEAD
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    gap: 10px;
+=======
+                    justify-content: right;
+                    margin-bottom: 10px;
+                    margin-right: 20px;
+>>>>>>> refs/remotes/origin/master
+
+
+
+                    .productos__modal--buttom{
+<<<<<<< HEAD
+                        width: auto;
+=======
+                        width: 200px;
+>>>>>>> refs/remotes/origin/master
+                        background-color: $colorPrincipal;
+                    }
+
+                }
+            }
+            
+        }
+
+        .main__cart{
+            width: 500px;
+            background-color: $colorWhite;
+            padding: 25px;
+            height: auto;
+            box-sizing: border-box;
+            position: absolute;
+            right: -500px;
+            @include shadowCOntainer(22px, rgba(0, 0, 0, 0.3), $colorWhite);
+            top: 100px;
+            text-align: center;
+            justify-content: center;
+            transition: all .2s ease-in-out;
+            // visibility: hidden;
+
+            &.show{
+                right: 10px;
+                // visibility: visible;
+            }
+
+            .main__cart--title{
+            font-size: $fontZise;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid $colorPrincipal;
+            }
+
+            .cart__container{
+                @include flex;
+                justify-content: space-between;
+
+                .cart__container--img{
+                    width: 50px;
+                }
+
+                .cart__container--p1{
+                    width: auto;
+                    align-content: center;
+                }
+
+                .cart__container--borrar{
+                    width: 40px;
+                    align-content: center;
+                }
+
+                .cart__container--borrar:hover{
+                    
+                    opacity: .6;
+                    cursor: pointer;
+                }
+
+                
+                
+            }
+            .lista__carrito{
+                @include flex;
+                
+                flex-direction: column;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                
+                .list__carrito{
+
+                    @include flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 10px;
+                    border-bottom: 1px solid $colorPrincipal;
+                    
+                    .cart__container--img{
+                        width: 50px;
+                        justify-content: left;
+                    }
+    
+                    .cart__container--borrar{
+                        width: 40px;
+                        align-content: center;
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+    
+                    .cart__container--borrar:hover{
+                        
+                        opacity: .6;
+                        cursor: pointer;
+                    }
+                }
+            
+            }
+
+
+        }
+
+        .nav-bar{
+            @include flex;
+            flex-direction: column;
+            width: 300px;
+            background-color: $colorWhite;
+            padding: 25px;
+            height: auto;
+            box-sizing: border-box;
+            position: absolute;
+            left: -300px;
+            @include shadowCOntainer(22px, rgba(0, 0, 0, 0.3), $colorWhite);
+            top: 0;
+            text-align: center;
+            justify-content: center;
+            transition: all .2s ease-in-out;
+        
+            &.show{
+                left: 0;
+            }
+
+            .nav-bar__menu{
+                @include flex;
+                justify-content: space-between;
+                
+                .nav-bar__menu--menulogo{
+                    
+                    
+                    img{    
+                        @include img100px;
+                        
+                            
+                    }
+                    
+                }
+                .nike{
+                    display: flex;
+                    justify-content: left;    
+            
+                }
+                
+                .cerrar{
+                display: flex;
+                justify-content: right;
+                
+                width: 20px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+
+            .nav-bar__container{
+                
+                display: flex;
+                // flex-direction: column;
+                justify-content: left;
+                
+                .nav-bar__container--list{
+                    list-style: none;
+                    gap: 10px;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    
+    
+                    .nav-bar__container--item{
+                        font-size: $fontZise;
+                        font-weight: 600;
+                      
+                       text-align: left;
+    
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+    
+                        a:hover{
+                            color: $colorPrincipal;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+@media (max-width: 820px) {
+    body{
+        header{
+            padding: 15px;
+        
+        }
+        
+        main{
+            .main__productos {
+                grid-template-columns: repeat(auto-fill), minmax(200px, 1fr);
+            }
+        
+            .main__cart{
+                width: 400px;
+                top: 80px;
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    body{
+
+        header{
+            .header__menu--menulogo,
+            .header__menu--logojust,
+            .header__menu--logoNike{
+                width: 80px;
+            }
+
+        }
+
+        main{
+
+            .main__banner{
+                padding: 30px 0;
+            }
+            
+            .main__banner h2 {
+                font-size: 20px;
+            }
+            
+            .main__banner p{
+                font-size: 16px;
+            }
+            
+            .main__productos{
+                grid-template-columns: 1fr;
+                padding: 10px;
+                border-color: 1px #FF6600 solid;
+            }
+    
+            .main__productos--img {
+                width: 100%;
+                max-width: 200px;
+                margin-bottom: 10px;
+                
+            }
+            
+            .main__productos h3, .main__productos p{
+                padding: 0, 12px;
+            }
+            
+            .main__cart {
+                
+                width: 100%;
+                
+                padding: 25px;
+                height: auto;
+                box-sizing: border-box;
+                position: unset;
+                right: 0;
+                top: 300px;
+                text-align: center;
+                
+            }
+            
+            .main__cart h2 {
+                padding: 15px 0;
+            }
+            
+            .main__cart div{
+                flex-direction: column;
+                align-items: center;
+                gap: 5px 0;
+            }
+            
+            .main__cart--img{
+                width: 100px;
+            }
+
+            
+        }
+    }
+}
